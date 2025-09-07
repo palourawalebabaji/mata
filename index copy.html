@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PALOURA WALE BABA JI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Om watermark background */
+    body::before {
+      content: "🕉️";
+      font-size: 120px;
+      color: rgba(255, 215, 0, 0.08);
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      animation: float 8s infinite alternate ease-in-out;
+    }
+    body::after {
+      content: "🕉️";
+      font-size: 150px;
+      color: rgba(255, 215, 0, 0.06);
+      position: fixed;
+      bottom: 15%;
+      right: 12%;
+      animation: float2 10s infinite alternate ease-in-out;
+    }
+    @keyframes float {
+      from { transform: translateY(0px) rotate(0deg); }
+      to { transform: translateY(-30px) rotate(10deg); }
+    }
+    @keyframes float2 {
+      from { transform: translateY(0px) rotate(0deg); }
+      to { transform: translateY(30px) rotate(-10deg); }
+    }
+
+    .container {
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+    .glow {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 10px #ff3c6a, 0 0 20px #ff3c6a, 0 0 30px #ff3c6a;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff3c6a, 0 0 20px #ff3c6a, 0 0 30px #ff3c6a;
+      }
+      to {
+        text-shadow: 0 0 20px #ffd700, 0 0 30px #ff3c6a, 0 0 40px #ffd700;
+      }
+    }
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: white;
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .links a:hover {
+      background: #ff3c6a;
+      color: white;
+    }
+
+    /* Falling 🙏🏻 emojis */
+    .emoji {
+      position: fixed;
+      top: -50px;
+      font-size: 28px;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100px); opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Om Sound (Looping) -->
+  <audio id="omSound" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_39c8dd4b88.mp3?filename=om-meditation-123106.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Falling 🙏🏻 emojis on left edge -->
+  <div class="emoji" style="left:2%; animation-duration:6s;">🙏🏻</div>
+  <div class="emoji" style="left:5%; animation-duration:8s;">🙏🏻</div>
+  <div class="emoji" style="left:8%; animation-duration:10s;">🙏🏻</div>
+
+  <!-- Falling 🙏🏻 emojis on right edge -->
+  <div class="emoji" style="right:2%; animation-duration:7s;">🙏🏻</div>
+  <div class="emoji" style="right:5%; animation-duration:9s;">🙏🏻</div>
+  <div class="emoji" style="right:8%; animation-duration:11s;">🙏🏻</div>
+
+  <div class="container">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h1>PALOURA WALE BABA JI</h1>
+    <p class="glow">🙏 JAI MATA DI 🙏</p>
+    <p>
+      JAI MATA DI. This is official website of Paloura Wale Baba Ji. <br>
+      Keep supporting. JAI MATA DI 🙏🏻
+    </p>
+    <p class="glow">🙏 JAI MATA DI 🙏</p>
+    <div class="links">
+      <a href="https://youtube.com/@asood24?si=SKMI402GNDXre_Ht" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/paloura_wale_baba_g?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+    </div>
+  </div>
+</body>
+</html>
